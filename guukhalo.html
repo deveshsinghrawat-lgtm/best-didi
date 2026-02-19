@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Best Sister Ever</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, pink, lightblue);
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#message {
+  font-size: 25px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💖 To The Best Sister Ever 💖</h1>
+<h2>Guu khana hai ? 😏</h2>
+
+<button onclick="sayYes()">Yes</button>
+<button onclick="changeNo()">No</button>
+
+<div id="message"></div>
+
+<script>
+let noMessages = [
+  "Are you sure? 🤨",
+  "Pakka nahi khana? 😶",
+  "Soch lo thoda 🤭",
+  "Last chance 😈",
+  "Itna attitude? 😂",
+  "Ab toh haan bolo 😤"
+];
+
+let index = 0;
+
+function sayYes() {
+  document.getElementById("message").innerHTML = "Yayyy mazza aa gaya 🎉😂";
+}
+
+function changeNo() {
+  if (index < noMessages.length) {
+    document.querySelector("button[onclick='changeNo()']").innerText = noMessages[index];
+    index++;
+  } else {
+    document.querySelector("button[onclick='changeNo()']").innerText = "Bas haan bol do 😭";
+  }
+}
+</script>
+
+</body>
+</html>
